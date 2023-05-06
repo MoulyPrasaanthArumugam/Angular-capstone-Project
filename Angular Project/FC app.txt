@@ -1,0 +1,38 @@
+Type: Food Order   
+Name: FC
+
+
+Forms:
+Signup - used to signup a new user
+sign in - used to Sign in 
+Home - Category wise banners
+Listing - Listing Menu based on category with Type and Cuisines Filter (Add to cart) .
+Cart - Listing for Items added to Cart with checkout option
+
+
+Tables: Done
+Menu Master
+User Master
+Cart Master
+
+
+Service Methods:
+Get All Menu <Get>  --Done
+Categorywise Menu <Get> --Done
+Get User<Get>
+Get Cart<Get>
+
+Add Cart <post>
+Add User<Post>
+Checkout Cart <Put>
+delete cart <delete>
+
+
+
+
+
+
+
+
+
+

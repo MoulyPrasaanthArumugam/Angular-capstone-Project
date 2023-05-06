@@ -1,0 +1,69 @@
+FC SCRIPT
+
+CREATE DATABASE FC_DB
+
+CREATE TABLE USER_MASTER (
+    ID UNIQUEIDENTIFIER NOT NULL,
+    FullName VARCHAR(50) NOT NULL,
+	Alias VARCHAR(50) NOT NULL,
+	Email VARCHAR(50) NOT NULL,
+    Password VARCHAR(50) NOT NULL
+)
+
+
+CREATE TABLE MENU_MASTER (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+	Description Varchar(200) NOT NULL,
+    Category VARCHAR(50) NOT NULL,
+    Type  VARCHAR(50) NOT NULL,
+	Cuisines VARCHAR(50) NOT NULL,
+	Price decimal )
+
+INSERT INTO MENU_MASTER VALUES ('Idly','Two pieces per set. SideDishes: Sambar and Red chutney','BreakFast','Veg','Indian',50.00)
+INSERT INTO MENU_MASTER VALUES ('Dhosa','Two pieces per set. SideDishes: Sambar and Coconut chutney','BreakFast','Veg','Indian',50.00)
+INSERT INTO MENU_MASTER VALUES ('Ghee Roast','SideDishes: Sambar and Coconut chutney','BreakFast','Veg','Indian',75.00)
+INSERT INTO MENU_MASTER VALUES ('Chapati','Two pieces per set. SideDishes: Channa Masala','BreakFast','Veg','Indian',50.00)
+INSERT INTO MENU_MASTER VALUES ('Poori','Two pieces per set. SideDishes: Kurma','BreakFast','Veg','Indian',50.00)
+
+
+INSERT INTO MENU_MASTER VALUES ('Chicken Briyani','SideDish: Egg, Raitha and Onion','Lunch','Non-Veg','Arabian',150.00)
+INSERT INTO MENU_MASTER VALUES ('Mutton Briyani','SideDish: Egg, Raitha and Onion','Lunch','Non-Veg','Arabian',230.00)
+INSERT INTO MENU_MASTER VALUES ('Mushroom Briyani','SideDish: Raitha and Onion','Lunch','Non-Veg','Arabian',120.00)
+INSERT INTO MENU_MASTER VALUES ('Veg Meals','Combo consist of Rice,Sambar,Rasam,2 Poriyal and Payasam','Lunch','Veg','Indian',150.00)
+INSERT INTO MENU_MASTER VALUES ('Non-Veg Meals','Combo consist of Rice,Chicken curry,Rasam,50g Chilli chicken and Payasam','Lunch','Non-Veg','Indian',200.00)
+
+
+INSERT INTO MENU_MASTER VALUES ('Shawarma','Chicken Shawarma 150g SideDish: Myonise','Dinner','Non-Veg','Arabian',150.00)
+INSERT INTO MENU_MASTER VALUES ('BBQ','Chicken BBQ 250g SideDishes: BBQ Sauce and Myonise','Dinner','Non-Veg','Arabian',200.00)
+INSERT INTO MENU_MASTER VALUES ('Parota','Two pieces per set. SideDishes: Chicken Kurma','Dinner','Non-Veg','Indian',50.00)
+INSERT INTO MENU_MASTER VALUES ('Egg Kothu','Added 2 Parotta and 2 eggs.  SideDishes: Chicken Kurma','Dinner','Non-Veg','Indian',100.00)
+INSERT INTO MENU_MASTER VALUES ('Veg Fried Rice','Added Egg and Rice. SideDishes: Veg Kurma and Tomato Ketchup','Dinner','Veg','Indian',80.00)
+INSERT INTO MENU_MASTER VALUES ('Chicken Fried Rice','Added Chicken, Egg and Rice. SideDishes: Chicken Kurma and Tomato Ketchup','Dinner','Non-Veg','Indian',120.00)
+
+
+INSERT INTO MENU_MASTER VALUES ('Coke','250ml','Snacks','Veg','NA',90.00)
+INSERT INTO MENU_MASTER VALUES ('Virgin Mogito','250ml','Snacks','Veg','NA',150.00)
+INSERT INTO MENU_MASTER VALUES ('Pepsi','250ml','Snacks','Veg','NA',90.00)
+INSERT INTO MENU_MASTER VALUES ('French Fries','250g','Snacks','Veg','NA',200.00)
+INSERT INTO MENU_MASTER VALUES ('Chicken Nuggets','3 pieces','Snacks','Non-Veg','NA',100.00)
+INSERT INTO MENU_MASTER VALUES ('Chicken Lolipop','5 pieces','Snacks','Non-Veg','NA',120.00)
+
+
+
+CREATE TABLE Cart_MASTER (
+    ID UNIQUEIDENTIFIER NOT NULL,
+    UserID VARCHAR(50)  NOT NULL,
+    ItemID INT NOT NULL,
+    QTY  INT NOT NULL,
+	Checkout INT NOT NULL)
+
+
+
+INSERT INTO Cart_MASTER VALUES ('mouly.prasaanth@mail.com','1','3','0')
+INSERT INTO Cart_MASTER VALUES ('mouly.prasaanth@mail.com','3','2','0')
+
+
+select * from USER_MASTER
+select * from MENU_MASTER
+select * from Cart_MASTER

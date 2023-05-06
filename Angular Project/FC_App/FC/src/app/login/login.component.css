@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  height: 100vh;
+  background-image: url('/assets/images/img3.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  
+}
+
+.form-group {
+  text-align: left;
+  color: white;
+}
+
+.form-control {
+  width: 300px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+}
+
+/* Flexbox styles */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}

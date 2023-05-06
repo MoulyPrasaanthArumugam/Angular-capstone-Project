@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <select class="form-control" [(ngModel)]="type" (change)="onTypeChange($event)">
+        <option value="" selected>All Types</option>
+        <option *ngFor="let foodType of type" [value]="foodType">{{ foodType }}</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control" [(ngModel)]="cuisine" (change)="onCuisineChange($event)">
+        <option value="" selected>All Cuisines</option>
+        <option *ngFor="let foodCuisine of cuisine" [value]="foodCuisine">{{ foodCuisine }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let food of foods">
+      <div class="card mb-4 box-shadow">
+        <img class="card-img-top" [src]="food.imgUrl" alt="Food Image">
+        <div class="card-body">
+          <h4 class="card-text">{{ food.name }}</h4>
+          <p class="card-text">{{ food.description }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+            <span class="text-muted">₹{{ food.price }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

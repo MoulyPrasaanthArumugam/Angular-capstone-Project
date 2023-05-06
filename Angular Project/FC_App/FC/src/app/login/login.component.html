@@ -1,0 +1,20 @@
+<body>
+  <div class="container d-flex flex-column justify-content-center align-items-cente">
+
+    <!--<form (ngSubmit)="login()">-->
+    <form>
+      <div class="form-group">
+        <label for="username">Login ID (Mail ID)</label>
+        <input type="text" class="form-control" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+      <button type="submit" class="btn btn-primary"  (click)="SignUp()" style="margin-left: 10px;">Sign Up</button>
+
+    </form>
+
+  </div>
+</body>

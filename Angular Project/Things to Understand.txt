@@ -1,0 +1,4 @@
+Things to Understand
+1)Use of DbContext
+2)Constructor Injection part in controller
+3)Asynch, <IactionResult>,ToListAsync() in a controller method

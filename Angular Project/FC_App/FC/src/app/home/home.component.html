@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4">
+        <button class="category-button" [routerLink]="['/food-list', 'Breakfast']">
+          <img src="assets/images/bf.jpg" alt="Breakfast" title="Breakfast" class="img-fluid">
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="category-button" [routerLink]="['/food-list', 'Lunch']">
+          <img src="assets/images/Lunch.jpg" alt="Lunch" title="Lunch" class="img-fluid">
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="category-button" [routerLink]="['/food-list', 'Dinner']">
+          <img src="assets/images/dinner.jpg" alt="Dinner" title="Dinner" class="img-fluid">
+        </button>
+      </div>
+
+      <div class="col-md-4">
+        <button class="category-button" [routerLink]="['/food-list', 'Snacks']">
+          <img src="assets/images/snacksb.jpg" alt="Snacks" title="Snacks & Beverages" class="img-fluid">
+        </button>
+      </div>
+
+    </div>
+  </div>
+</body>
+
